@@ -4,24 +4,30 @@ package entities;
 public class Products {
     public String name;
     public double price;
-    public int quantity; //atributos
+    public int quantity;
 
-    public double totalValueInStock(){
-       return price * quantity;
+    public Products(String name, double price, int quantity){
+        this.name = name; //this atribui o objeto "name" apenas é o parametro do metodo
+        this.price = price;
+        this.quantity = quantity;
     }
-    public void addProducts(int quantity){
-        this.quantity += quantity; //this é para referenciar os atributos de classe, e nao qualquer variavel
+
+    public double totalValueInStock() {
+        return price * quantity;
     }
-    public void removeProducts(int quantity){
+    public void addProducts(int quantity) {
+        this.quantity += quantity;
+    }
+    public void removeProducts(int quantity) {
         this.quantity -= quantity;
     }
-    public String toString(){
+    public String toString() {
         return name
                 + ", $ "
-                + String.format("%.2f", price) //para aparecer o preço com duas casas decimais apos a virgula (equi. centavos)
+                + String.format("%.2f", price)
                 + ", "
                 + quantity
                 + " units, Total: $ "
-                + String.format("%.2f", totalValueInStock()); //aparecer cemntavos tbm
+                + String.format("%.2f", totalValueInStock());
     }
 }
