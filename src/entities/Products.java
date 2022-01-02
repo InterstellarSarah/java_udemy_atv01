@@ -10,7 +10,7 @@ public class Products {
        return price * quantity;
     }
     public void addProducts(int quantity){
-        this.quantity += quantity; //this é para referenciar os atributos de classe, e nao qualquer variavel dentro deste metodo
+        this.quantity += quantity; //this é para referenciar os atributos de classe, e nao qualquer variavel
     }
     public void removeProducts(int quantity){
         this.quantity -= quantity;

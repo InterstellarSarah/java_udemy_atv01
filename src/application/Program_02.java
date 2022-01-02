@@ -32,7 +32,7 @@ public class Program_02 {
 
         System.out.println();
         System.out.println("Enter the number of products to be added in stock: ");
-        int quantity = sc.nextInt();
+        int quantity = sc.nextInt(); // declarada aqui uma variavel que deve se diferenciar ao metodo de classe
         product.addProducts(quantity);
 
         System.out.println();
